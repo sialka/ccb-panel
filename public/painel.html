@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Panel</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style-panel.css">  
+
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet"> 
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body >   
+    
+    <!-- Conferência de Fichas -->
+    <div class="row">    
+    
+      <div class="col-8 text-center d-flex align-items-center">      
+        <!-- <h1 class="font-1">Conferência de Fichas</h1>-->
+        <div id="carousel-panel-1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+  
+            <div class="carousel-item active">
+              <img src="assets/img/fichas-01.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/fichas-02.png" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+        </div>      
+  
+      </div>
+      <div class="col-4 text-center">      
+        <div class="card">
+          <div class="card-body">
+            <h5 class="font-1">Senha</h5>                    
+            <hr>
+            <p id="painel-ficha" class="font-2">0</p>          
+          </div>
+        </div>
+      </div>   
+  
+    </div>  
+  
+    <!-- Reserva de Roupas -->
+    <div class="row">
+      
+      <div class="col-8 text-center d-flex align-items-center">
+        <!--<h1 class="font-1">Reserva de Roupas</h1>-->
+        <div id="carousel-panel-2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+    
+            <div class="carousel-item active">
+              <img src="assets/img/reservas-01.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/reservas-02.png" class="d-block w-100" alt="...">
+            </div>
+  
+          </div>
+        </div>            
+        
+  
+      </div>
+      <div class="col-4 text-center">      
+          <div class="card">
+            <div class="card-body">
+              <h5 class="font-1">Senha</h5>                    
+              <hr>
+              <p id="painel-reserva" class="font-2">0</p>                      
+            </div>
+          </div>
+      </div>     
+  
+    </div>
+
+
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="message.js"></script>
+
+</body>
+</html>

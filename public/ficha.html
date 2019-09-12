@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Ficha</title>
+  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/socket.io.js"></script>
+
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style-control.css">  
+
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet"> 
+  
+</head>
+<body>
+
+  <p style="display: none" id="form-ficha"></p>
+  <p style="display: none" id="painel-reserva"></p>
+
+  <div class="container">
+
+    <div class='row text-center'>
+      <div class="col-12">
+        <h1>Controle de Fichas</h1>
+      </div>
+    </div>
+    
+    <div class="row justify-content-start">      
+
+      <div class="col-12 text-center">    
+
+        <label class='title'>Senha</label>
+        
+        <form id="chat">                     
+
+          <div class="row d-flex align-items-center">
+            <div class="col-4">
+              <a onclick="anterior()" class="btn btn-outline-danger btn-block text-danger"> - </a>
+            </div>
+            <div class="col-4">
+              <label class="form-control" id="painel-ficha">0</label>              
+            </div>
+            <div class="col-4">
+                <a onclick="proximo()" class="btn btn-outline-success btn-block text-success"> + </a>
+            </div>
+          </div>
+
+          <div class="row d-flex align-items-center" style="height: 70px">
+            <div class="col-12">
+              <button class="btn btn-primary btn-block" type="submit">Chamar</button> 
+            </div>
+          </div>            
+
+        </form>    
+      
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="message.js"></script>
+  <script src="buttons.js"></script>
+
+</body>
+</html>

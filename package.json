@@ -1,0 +1,15 @@
+{
+  "name": "CHAT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "socket.io": "^2.2.0"
+  }
+}

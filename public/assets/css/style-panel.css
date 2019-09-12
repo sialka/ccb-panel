@@ -1,0 +1,93 @@
+/** General */
+
+html, body {      
+  width: 100%;
+  height: 100%;  
+  overflow: hidden;  
+  /* https://www.maujor.com/tutorial/css3-gradientes-lineares.php */
+  background-image: linear-gradient(100deg,gray,black)
+}
+
+.row{
+  /* height: 100%;     Um painel de senha */
+  height: 50%;     /* Dois Paineis de senha */
+  margin: 0px !important;  
+}
+
+.col{
+  margin: 0px !important;
+}
+
+
+/** Setup */
+
+h1{  
+  color:yellow;
+  margin-top: 10px; 
+  font-size: 60px;  
+}
+
+h5{
+  font-size: 95px;  
+}
+
+.font-1{
+  font-family: 'Bungee', cursive;
+  font-weight: 400;
+}
+
+.font-2{
+  font-family: 'Bungee', cursive;
+  font-weight: 700;
+}
+
+.card .card-body p{  
+  font-size: 177px;  
+  color: blue;
+}
+
+
+/* ? */
+
+.card-title-atendidos{  
+  font-size: 55px;  
+}
+
+.card, .carousel{
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.card ul {
+  list-style: none;    
+  padding: 0;
+}
+
+.card .senha-atend{
+  font-size: 70px;  
+  color: #aac72b;
+}
+
+/** Panel Igreja */
+
+.card-title-igreja{
+  font-size: 85px;  
+}
+
+.igreja-font{
+  margin: 0;  
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+} 
+
+.igreja-size{
+  font-size: 60px;  
+  color: blue;
+}
+
+.card .env-atend{
+  font-size: 40px;
+  color: rgb(95, 95, 11);
+  margin-top: 40px;
+  text-align: left;
+}
