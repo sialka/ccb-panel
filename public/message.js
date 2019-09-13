@@ -1,5 +1,5 @@
-const socket = io('http://localhost:3000');
-//const socket = io('http://192.168.15.30:3000');
+//const socket = io('http://localhost:3000');
+const socket = io('http://192.168.0.107:3000');
 
 function beep(){
 
@@ -8,12 +8,12 @@ function beep(){
 
   const o = context.createOscillator();
 
-  o.type = "square";
+  o.type = "triangle";
   o.connect(context.destination);
   o.start();
   setTimeout(function(){ 
           o.stop();
-  }, 200);
+  }, 500);
 }
 
 function renderSenha(message) {
