@@ -1,0 +1,64 @@
+
+body{  
+  margin: 0;
+  overflow: hidden;  
+  background-image: linear-gradient(100deg,gray,white);
+  
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  align-content: center;     
+  width: 100vw;
+  height: 50vh;
+}
+
+/** col */
+
+.col{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100%;    
+}
+.col-info{
+  width: 60%;    
+}
+.col-senha{
+  width: 40%;    
+}
+.col-align{    
+  flex-direction: column;
+  justify-content: center; 
+}
+
+/* General */
+
+h1,h2,p{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+h1{  
+  font-family: 'Rancho', cursive;
+  font-size: 10em;
+}
+h2{  
+  font-family: 'Baloo Bhaina', cursive;
+  font-size: 5em;
+}
+p {
+  font-family: 'Squada One', cursive;  
+  font-weight: 400;    
+  font-size: 18rem;
+}
+.cor-senha{  
+  color: black;
+}
+.cor-ficha{
+  color: blue;
+}
+.cor-reserva{
+  color:red;
+}

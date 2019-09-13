@@ -6,72 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Panel</title>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="assets/js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style-panel.css">  
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/style-panel.css">   -->
+  <link rel="stylesheet" href="assets/css/panel.css">  
 
-  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Rancho|Squada+One&display=swap" rel="stylesheet"> 
 
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  
 </head>
-<body >   
+<body>   
     
-    <!-- Conferência de Fichas -->
-    <div class="row">    
-    
-      <div class="col-8 d-flex align-items-center justify-content-end">
-       
-        <div class='card'>
-          <div class="card-body">            
-            <h1 class="font-1 azul">Conferência de Fichas</h1>            
-          </div>
-        </div>
   
+
+    <!-- Conferência de Fichas -->  
+  
+    <div class="row">        
+      <div class='col col-info'>        
+        <h1 class="cor-ficha">Conferência de Fichas</h1>                    
       </div>
-      <div class="col-4 d-flex align-items-center justify-content-end">      
-
-        <div class="card">
-          <div class="card-body">
-            <h5 class="font-1">Senha</h5>                                
-            <p id="painel-ficha" class="font-2 azul">0</p>          
-          </div>
-        </div>
-
-      </div>   
-  
+      <div class="col col-senha col-align">        
+        <h2 class="cor-senha">Senha</h2>
+        <p id="painel-ficha" class="cor-ficha">0</p>
+      </div>       
     </div>  
-  
+
     <!-- Reserva de Roupas -->
-    <div class="row">
-      
-      <div class="col-8 d-flex align-items-center justify-content-end">
-
-        <div class='card'>
-          <div class="card-body">            
-            <h1 class="font-1 vermelho">Reserva de Roupas</h1>            
-          </div>    
-        </div>
-  
-      </div>
-      <div class="col-4 d-flex align-items-center justify-content-end"">      
-
-        <div class="card">
-            <div class="card-body">
-              <h5 class="font-1">Senha</h5>                                  
-              <p id="painel-reserva" class="font-2 vermelho">0</p>                      
-            </div>
-          </div>
-
-        </div>     
-  
+    <div class="row">          
+      <div class='col col-info'>        
+        <h1 class="cor-reserva">Reserva de Roupas</h1>                      
+      </div>      
+      <div class="col col-senha col-align">        
+        <h2 class="cor-senha">Senha</h2>                                  
+        <p id="painel-reserva" class="cor-reserva">0</p>                                              
+      </div>     
     </div>
 
 
-
-  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- <script src="assets/js/bootstrap.min.js"></script> -->
   <script src="message.js"></script>
 
 </body>

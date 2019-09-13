@@ -1,5 +1,6 @@
 //const socket = io('http://localhost:3000');
-const socket = io('http://192.168.0.107:3000');
+const socket = io('http://192.168.15.30:3000'); 
+//const socket = io('http://192.168.0.107:3000');
 
 function beep(){
 
@@ -82,6 +83,5 @@ $('#chat').submit(function(event) {
     }
 
   }
-
 
 });

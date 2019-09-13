@@ -13,7 +13,7 @@ h1{
   color:black;
   margin-top: 50px; 
   margin-bottom: 50px;
-  font-size: 60px;  
+  font-size: 2em;  
 }
 
 #painel-reserva, #painel-ficha{
@@ -23,15 +23,15 @@ h1{
 }
 
 .btn-control{
-  font-size: 95px;
+  font-size: 5em;
 }
 
 #chat .title{
   color: dimgray;
   font-weight: 400;  
-  font-size: 50px;
+  font-size: 5em;
 }
 
 .btn{
-  font-size: 50px;  
+  font-size: 2em;  
 }
