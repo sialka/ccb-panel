@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {   
+  font-family: 'Bungee', cursive;
+  font-weight: 700; 
+}
+
+.container{
+	width: 100vw;
+  height: 100vh;
+  padding: 1em 1em;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column; 
+  text-align: center;
+  padding-bottom: 1em;
+}
+header h1 {  
+  color:black;
+  margin: 0;  
+  font-size: 2.8em;
+}
+header label{
+  color: dimgray;    
+  font-size: 1.8em;
+}
+
+
+main{  
+  display: flex;
+  justify-content: space-between;    
+  text-align: center;
+  padding-bottom: 2em;  
+}
+main .item-button{  
+  width: 33%;  
+}
+main .item-number{  
+  width: 33%;  
+}
+main .item-number label{
+  display: block;
+  font-size: 5em;  
+}
+
+footer{  
+  text-align: center;  
+}
+
+.btn-large{
+  width: 100%;
+}
+
+.btn{
+  font-size: 1.5em;  
+  font-weight: 400;
+  text-align: center;  
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  padding: 2em;   
+  display: block;
+}
+
+.btn-danger{
+  color: red;
+  border: 1px solid red;
+}
+.btn-danger:hover{
+  background-color: #dc3545;
+  border-color: #dc3545; 
+}
+
+.btn-success{
+  color: green;
+  border: 1px solid green;
+}
+.btn-success:hover{
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-primary{  
+  font-family: 'Bungee', cursive;
+  background: #0069d9;
+  color: white;
+  border: 1px solid #0062cc;
+}
+.btn-primary:hover{
+  background-color: blue;  
+}
+
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}

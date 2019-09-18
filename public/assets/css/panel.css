@@ -1,9 +1,14 @@
-
-body{  
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{    
   overflow: hidden;  
   background-image: linear-gradient(100deg,gray,white);
-  
+  user-select: none;  
 }
 
 .row{

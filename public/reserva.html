@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>Ficha</title>
+  <title>Controle de Reserva</title>
   
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/socket.io.js"></script>
+  <link rel="stylesheet" href="assets/css/control.css"> 
 
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style-control.css">  
-
-  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">   
     
 </head>
 <body>
@@ -24,48 +19,37 @@
 
   <div class="container">
 
-    <div class='row text-center'>
-      <div class="col-12">
-        <h1>Controle de Reserva</h1>
-      </div>
-    </div>
-    
-    <div class="row justify-content-start">      
+    <header class="item-title">
+      <h1 class="red">Controle de Reservas</h1>      
+      <label>Senha Nº</label>
+    </header>
 
-      <div class="col-12 text-center">    
-
-        <label class='title'>Senha</label>
-
-        <form id="chat">      
-
-          <div class="row d-flex align-items-center">
-            <div class="col-4">
-              <a onclick="anterior()" class="btn-control btn btn-outline-danger btn-block text-danger"> - </a>
-            </div>
-            <div class="col-4">
-              <label class="form-control" id="painel-reserva">0</label>              
-            </div>
-            <div class="col-4">
-                <a onclick="proximo()" class="btn-control btn btn-outline-success btn-block text-success"> + </a>
-            </div>
-          </div>
-
-          <div class="row d-flex align-items-center">
-            <div class="col-12">
-              <button class="btn btn-outline-primary btn-block" type="submit">Chamar</button> 
-            </div>
-          </div>            
-
-        </form>    
-      
+    <main>
+      <div class="item-button">
+        <a onclick="anterior()" class="btn btn-danger"> - </a>
       </div>
 
-    </div>
+      <div class="item-number">
+        <label id="painel-reserva">0</label>              
+      </div>
+
+      <div class="item-button">
+        <a onclick="proximo()" class="btn btn-success"> + </a>
+      </div>
+    </main>
+
+    <footer class="item-submit">
+      <form id="chat">                     
+        <button class="btn btn-large btn-primary" type="submit">Chamar</button> 
+      </form>
+    </footer>    
     
   </div>
 
-  <script src="message.js"></script>
-  <script src="buttons.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/socket.io.js"></script>
+  <script src="assets/js/message.js"></script>
+  <script src="assets/js/buttons.js"></script>
   
 </body>
 </html>

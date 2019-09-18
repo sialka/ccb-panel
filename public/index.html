@@ -4,52 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Painel de Atendimento</title>
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/socket.io.js"></script>
   
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <title>Painel de Atendimento</title>  
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">   
 </head>
 <body>
 
-  <div class="container" style="margin: 50px auto">
-      
-    <div class="jumbotron text-center">
+  <div class="container">
+    
+  <header>    
 
-      <h1 class="display-4">Painel de Atendimento</h1>
+    <h1>Painel de Atendimento</h1>   
 
-      <hr class="my-4">
+    <div class="flex-container">
 
-      <div class='row'>
-        <div class="col-6">          
-          <img src="/assets/img/painel.png" class="img-fluid" alt="" width="150px">
-        </div>
-        <div class="col-6 d-flex align-items-center">
-            <a class="btn btn-primary btn-block" href="painel.html">Painel de Senhas</a>
-        </div>
+      <div>
+          <a class="btn" href="painel.html">Painel</a>
       </div>
-        
-      <div class='row'>
-        <div class="col-6">
-          <img src="/assets/img/painel-h.png" class="img-fluid" alt="" width="150px">
-        </div>
-        <div class="col-6 d-flex align-items-center">
-            <a class="btn btn-primary btn-block" href="ficha.html">Controle de Conferência de Ficha</a>
-        </div>
-      </div>      
+      <div>
+          <a class="btn" href="ficha.html">Fichas</a>
+      </div>
+      <div>
+          <a class="btn" href="reserva.html">Reservas</a>
+      </div>
 
+    </div>           
 
-      <div class='row'>
-        <div class="col-6">
-            <img src="/assets/img/painel-m.png" class="img-fluid" alt="" width="150px">
-        </div>
-        <div class="col-6 d-flex align-items-center">
-            <a class="btn btn-primary btn-block" href="reserva.html">Controle de Reserva de Roupas</a>
-        </div>
-      </div>           
-
-    </div>
+  </header> 
 
   </div>
 

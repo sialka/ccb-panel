@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {   
+  font-family: 'Bungee', cursive;
+  font-weight: 700; 
+  width: 100vw;
+  height: 100vh;
+}
+
+header h1 {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 3em;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container > div {
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;   
+  margin: auto auto;
+}
+
+.flex-container > div > a {
+  text-decoration: none;  
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.btn{
+  border: 1px solid blue;
+  background: #0066ff;
+  color: white;
+  display: block;
+  width: 400px;
+  border-radius: 15px;
+}
+.btn:hover{
+  background: #80b3ff;
+}
