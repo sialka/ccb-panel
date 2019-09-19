@@ -3,6 +3,7 @@ const socket = io('http://192.168.15.30:3000');
 //const socket = io('http://192.168.0.107:3000');
 const time = 2200;
 
+/** Beep */
 function beep(){
 
   //https://marcgg.com/blog/2016/11/01/javascript-audio/
@@ -18,12 +19,14 @@ function beep(){
   }, 500);
 }
 
+/** Time */
 function waitButton(){
   const btn = document.querySelector('button');
   btn.setAttribute('disabled','disabled');
   setTimeout(() => btn.removeAttribute('disabled'), time);  
 }
 
+/** Renderizar */
 function renderSenha(message) {
 
   if (message.painel == 1){ 
@@ -55,6 +58,7 @@ function renderSenha(message) {
   
 }
 
+/** Socket */
 socket.on('previousMessages', function(messages){
 
   for (message of messages) {
@@ -67,8 +71,8 @@ socket.on('receivedMessage', function(message){
 });
 
 
-// Enviando Senha
-$('#chat').submit(function(event) {
+/** Submit */
+$('#btnSubmit').submit(function(event) {
   
   event.preventDefault();
 
