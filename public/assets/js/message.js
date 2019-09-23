@@ -1,7 +1,25 @@
 //const socket = io('http://localhost:3000');
 const socket = io('http://192.168.15.30:3000'); 
 //const socket = io('http://192.168.0.107:3000');
-const time = 2200;
+
+
+
+/** */ Identificando o Painel */
+const bt = document.querySelector('button');
+if (bt.style.display=="none"){
+  
+  const form = document.querySelectorAll("p");
+
+  /** Removendo as animações */
+  form[0].addEventListener('animationend', event => {
+      form[0].classList.remove('wobble-hor-bottom'); 
+  });
+
+  form[1].addEventListener('animationend', event => {
+      form[1].classList.remove('wobble-hor-bottom');          
+  });
+}
+
 
 /** Beep */
 function beep(){
@@ -19,41 +37,31 @@ function beep(){
   }, 500);
 }
 
-/** Time */
-function waitButton(){
-  const btn = document.querySelector('button');
-  btn.setAttribute('disabled','disabled');
-  setTimeout(() => btn.removeAttribute('disabled'), time);  
-}
 
 /** Renderizar */
 function renderSenha(message) {
 
   if (message.painel == 1){ 
-    waitButton();
+    //waitButton();
 
     const painelFicha = document.querySelector('#painel-ficha');
     
     beep();
 
-    painelFicha.innerHTML = message.message;        
-    
-    painelFicha.style.animation = "";
-    setTimeout(() => painelFicha.style.animation = "wobble-hor-bottom 0.8s both", 8);      
+    painelFicha.innerHTML = message.message;            
+    painelFicha.classList.add('wobble-hor-bottom');     
     
   }
 
   if (message.painel == 2){ 
-    waitButton();
+    //waitButton();
 
     const painelReserva = document.querySelector('#painel-reserva');
     
     beep();
     
     painelReserva.innerHTML = message.message; 
-
-    painelReserva.style.animation = "";
-    setTimeout(() => painelReserva.style.animation = "wobble-hor-bottom 0.8s both", 8);          
+    painelReserva.classList.add('wobble-hor-bottom');     
   }
   
 }
