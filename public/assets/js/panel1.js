@@ -1,10 +1,9 @@
 //const socket = io('http://localhost:3000');
-const socket = io('http://192.168.15.30:3000'); 
+const socket = io('http://192.168.15.23:3000'); 
 //const socket = io('http://192.168.0.107:3000');
 
 
-
-/** */ Identificando o Painel */
+/** Identificando o Painel */
 const bt = document.querySelector('button');
 if (bt.style.display=="none"){
   

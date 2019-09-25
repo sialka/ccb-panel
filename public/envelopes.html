@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+  <title>Envelopes</title>  
+  <link rel="stylesheet" href="assets/css/control2.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">     
+</head>
+<body>  
+
+  <div class="container">
+
+    <header>
+      <h1><a href="/">Controle Envelopes</a></h1>            
+    </header>
+
+    <main class="place">       
+        <p>Em atendimento</p>
+        <h2 id="atendimento">---</h2>
+        <p>Próximo</p>
+
+        <select id="places" size="4">
+        </select>      
+    </main>     
+
+    <footer>
+      <div class="item flex">
+        <a class="btn reset" onclick="resete()">Reset</a>  
+      </div>
+      <div class="item flex">
+        <a class="btn call" onclick="chamar()">Chamar</button> 
+      </div>      
+      <div class="item flex">
+        <a class="btn repet" onclick="repete()">Repete</button> 
+      </div>      
+    </footer>        
+
+  </div>
+  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/socket.io.js"></script>
+  <script src="assets/js/panel2.js"></script>  
+  <script src="assets/js/control2.js"></script>  
+</body>
+</html>

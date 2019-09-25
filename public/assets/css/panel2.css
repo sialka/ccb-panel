@@ -12,53 +12,31 @@ body{
   cursor: none;
 }
 
-.row{
-  display: flex;
-  align-items: center;
-  align-content: center;     
-  width: 100vw;
-  height: 50vh;
-}
-
-/** col */
-
-.col{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  height: 100%;    
-}
-.col-info{
-  width: 60%;    
-}
-.col-senha{
-  width: 40%;    
-}
-.col-align{    
-  flex-direction: column;
-  justify-content: center; 
-}
-
-/* General */
-
 h1,h2,p{
   margin: 0;
   padding: 0;
   width: 100%;
+  text-align: center;
 }
+
+/* General */
+
 h1{  
   font-family: 'Rancho', cursive;
   font-size: 10em;
 }
+
 h2{  
   font-family: 'Baloo Bhaina', cursive;
   font-size: 5em;
 }
+
 p {
   font-family: 'Squada One', cursive;  
   font-weight: 400;    
-  font-size: 18rem;
+  font-size: 15rem;    
 }
+
 .cor-senha{  
   color: black;
 }
@@ -67,4 +45,26 @@ p {
 }
 .cor-reserva{
   color:red;
+}
+
+.box{
+  border: 1px solid black;
+}
+.title{
+  display: flex;  
+  align-items: center;  
+  max-width: 100%;
+  width: 100%;  
+  height: 15vh;
+  color: blue;  
+}
+
+.place{
+  display: flex;
+  align-items: center;    
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;  
+  height: 85vh;
+  color: red;  
 }
