@@ -31,4 +31,16 @@ io.on('connection', socket => {
   });
 });
 
-server.listen(3000, () => console.log('Server Running: http://localhost:3000'));
+server.listen(3000, () => {  
+  console.log('---------------');
+  console.log('CCB Painel 2019');
+  console.log('---------------');
+  console.log('');
+  console.log('Instruções:');
+  console.log('');
+  console.log('Utilizando um navegador: Chrome ou Mozilla');
+  console.log('');
+  console.log('• Acesse http://192.168.0.56:3000');
+  console.log('');
+  console.log('-------------------------------------------');
+});

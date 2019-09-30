@@ -1,6 +1,7 @@
 //const socket = io('http://localhost:3000');
-const socket = io('http://192.168.15.23:3000'); 
+//const socket = io('http://192.168.15.23:3000'); 
 //const socket = io('http://192.168.0.107:3000');
+const socket = io('http://192.168.0.56:3000');
 
 
 
@@ -20,17 +21,24 @@ painel.addEventListener('animationend', event => {
 /** Beep */
 function beep(){
 
-  //https://marcgg.com/blog/2016/11/01/javascript-audio/
-  const context = new AudioContext();
+  const controll = document.querySelector(".squares");
 
-  const o = context.createOscillator();
+  // Se tiver no Painel emite som.
+  if (controll) { 
 
-  o.type = "triangle";
-  o.connect(context.destination);
-  o.start();
-  setTimeout(function(){ 
-          o.stop();
-  }, 500);
+    //https://marcgg.com/blog/2016/11/01/javascript-audio/
+    const context = new AudioContext();
+
+    const o = context.createOscillator();
+
+    o.type = "triangle";
+    o.connect(context.destination);
+    o.start();
+    setTimeout(function(){ 
+            o.stop();
+    }, 500);
+
+  }
 }
 
 
