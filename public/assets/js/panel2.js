@@ -1,13 +1,6 @@
-//const socket = io('http://localhost:3000');
-//const socket = io('http://192.168.15.23:3000'); 
-//const socket = io('http://192.168.0.107:3000');
-const socket = io('http://192.168.0.56:3000');
+const socket = io(ip.io); 
 
-
-
-/** Identificando o Painel */
-
-  
+/** Identificando o Painel */  
 const painel = document.querySelector('#atendimento');  
 
 /** Removendo as animações */
@@ -15,8 +8,10 @@ painel.addEventListener('animationend', event => {
   painel.classList.remove('bounce-in-fwd'); 
 });
 
-
-
+const panelTitle = document.querySelector("#panel");  
+if (panelTitle){  
+  panelTitle.innerText = title.panel3;
+}
 
 /** Beep */
 function beep(){

@@ -1,14 +1,16 @@
-//const socket = io('http://localhost:3000');
-//const socket = io('http://192.168.15.23:3000'); 
-//const socket = io('http://192.168.0.107:3000');
-const socket = io('http://192.168.0.56:3000');
-
+const socket = io(ip.io); 
 
 /** Identificando o Painel */
 const bt = document.querySelector('button');
 if (bt.style.display=="none"){
   
   const form = document.querySelectorAll("p");
+
+  const panel1 = document.querySelector(".cor-ficha");
+  const panel2 = document.querySelector(".cor-reserva");
+
+  panel1.innerText = title.panel1;
+  panel2.innerText = title.panel2;
 
   /** Removendo as animações */
   form[0].addEventListener('animationend', event => {
