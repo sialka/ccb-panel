@@ -16,19 +16,21 @@
       <h1><a href="/">Controle Envelopes</a></h1>            
     </header>
 
-    <main class="place">       
-        <p>Em atendimento</p>
+    <main> 
+        <div class="flex-atendimento">
+          <p>Em atendimento</p>
+          <a onclick="resete()">Reset</a>    
+        </div>      
         <h2 id="atendimento">---</h2>
-        <p>Próximo</p>
-
-        <select id="places" size="4">
-        </select>      
+        
+        <div class="flex-proximo">
+          <p>Próximo</p>
+          <select id="places" size="4">
+          </select>      
+        </div>
     </main>     
 
     <footer>
-      <div class="item flex">
-        <a class="btn reset" onclick="resete()">Reset</a>  
-      </div>
       <div class="item flex">
         <a class="btn call" onclick="chamar()">Chamar</button> 
       </div>      
