@@ -44,7 +44,14 @@
     
   </div>
 
-  <script src="assets/js/data.js"></script>  
+  <script src="assets/js/data.js"></script>
+	<script>
+		// Mudan?a temporaria 
+		const ultima_senha = senha.numero;		
+		const painel_senha = document.querySelector('#painel-reserva');
+		painel_senha.innerText = ultima_senha;
+		console.log(ultima_senha)
+	</script>		
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/socket.io.js"></script>
   <script src="assets/js/panel1.js"></script>

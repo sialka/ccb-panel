@@ -87,7 +87,6 @@ socket.on('receivedMessage', function(message){
   renderSenha(message);
 });
 
-
 /** Submit */
 $('#btnSubmit').submit(function(event) {
   

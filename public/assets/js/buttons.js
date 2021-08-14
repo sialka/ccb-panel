@@ -2,11 +2,10 @@
  * Controle dos Botões
  */
 
-const localidades = 28;
-
+// 28 Localidades
+const localidades = 999;
 const ficha = document.querySelector('#form-ficha');
 const reserva = document.querySelector('#form-reserva');
-
 
 /**
  * Botão Próximo
