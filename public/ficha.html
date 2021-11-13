@@ -7,9 +7,31 @@
   
   <title>Controle de Ficha</title>
   
-  <link rel="stylesheet" href="assets/css/control.css">
+  <!--link rel="stylesheet" href="assets/css/control.css"-->
   <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">   
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+  <style>
+    .bungee{
+      font-family: 'Bungee', cursive;
+      font-weight: 700; 
+      overflow: hidden; 
+    }
+    .medium{
+      font-size: 4em;
+    }
+    .large{
+      font-size: 10em;
+    }
+    a{
+      color: white;
+    }
+    a:link{
+      text-decoration: none;      
+    }
+    a:hover{
+      color:red;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,32 +39,61 @@
   <p style="display: none" id="painel-reserva"></p>
 
   <div class="container">
+      
+      <div class="card bg-warning text-center bungee" style="margin-top: 2em">
 
-    <header class="item-title">
-      <h1 class="blue">Controle de Fichas</h1>      
-      <label>Senha Nº</label>
-    </header>
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <div class="">
+            <h1 class="bungee medium text-white">Controle de Fichas</h1>      
+          </div>
+          <div class="bungee medium text-white">
+            <a href="index.html">
+              &times;
+            </a>            
+          </div>
+          
+        </div>
+        
+        <div class="card-body bg-white">
 
-    <main>
-      <div class="item-button">
-        <a onclick="anterior()" class="btn btn-danger"> - </a>
+          <div class="d-flex justify-content-center">            
+            <label class="medium text-muted">Senha Nº</label>
+          </div>
+
+          <div class="d-flex justify-content-between">
+
+            <div class="d-flex align-items-center" style="width: 25%;">
+                <a onclick="anterior()" class="btn btn-block btn-lg btn-danger">
+                  <svg id="i-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+                  </svg>
+                </a>          
+            </div>
+            
+            <div class="" style="width: 50%;">              
+              <div id="painel-ficha" class="large">0</div>
+            </div>
+    
+            <div class="d-flex align-items-center" style="width: 25%">
+              <a onclick="proximo()" class="btn btn-block btn-success">
+                <svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M22 6 L30 16 22 26 M30 16 L2 16" />
+                </svg>                
+              </a>          
+            </div>
+
+          </div>
+
+        <div>
+        
+        <div style="margin-top: 1em;">
+          <form id="btnSubmit">            
+            <button class="btn btn-lg btn-block btn-primary medium" type="submit">Chamar</button>             
+          </form>          
+        </div>
+        
       </div>
-
-      <div class="item-number">
-        <label id="painel-ficha">0</label>              
-      </div>
-
-      <div class="item-button">
-        <a onclick="proximo()" class="btn btn-success"> + </a>
-      </div>
-    </main>
-
-    <footer class="item-submit">
-      <form id="btnSubmit">                     
-        <button class="btn btn-large btn-primary" type="submit">Chamar</button> 
-      </form>
-    </footer>    
-
+    
   </div>
   
   <script src="assets/js/data.js"></script>  

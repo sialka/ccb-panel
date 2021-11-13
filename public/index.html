@@ -7,26 +7,41 @@
   
   <title>Painel de Atendimento</title>  
   
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!--link rel="stylesheet" href="assets/css/main.css"-->
   <link href="https://fonts.googleapis.com/css?family=Carter+One|Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+  <style>
+    .btn2 {
+      height: 2.5em;
+      font-size: 2em;
+      text-align: center;
+      background-color: darkgrey;
+      color: white;
+    }
+  </style>
 </head>
 <body> 
     
-  <header>    
+  <div class="container">       
+    
+    <div class="text-right">
+      Painel de Atendimento v2
+    </div>
 
-    <h1>Painel de Atendimento</h1>   
-
-    <div class="flex-container">
+    <div class="card" style="margin-top: 5em;">
       
-      <div class="items grupo1">
-        <a class="btn cor1" href="panel1.html">Exibir Painel Conferência</a>
-        <a class="btn cor2" href="ficha.html">Controle - Conferência de Fichas</a>        
-        <a class="btn cor2" href="reserva.html">Controle - Reserva de Roupas</a>  
+      <div class="card-header text-center bg-dark text-white">
+        <h1>MENU</h1>   
       </div>
-      
-      <div class="items grupo1">
-        <a class="btn cor1" href="panel2.html">Exibir Painel Envelopes</a>            
-        <a class="btn cor2" href="envelopes.html">Controle - Entrega de Envelopes</a> 
+
+      <div class="list-group list-group-flush">
+
+        <a class="list-group-item btn2" href="panel1.html">Exibir Painel Conferência</a>        
+        <a class="list-group-item btn2 cor2" href="ficha.html">Controle - Conferência de Fichas</a>        
+        <a class="list-group-item btn2 cor2" href="reserva.html">Controle - Reserva de Roupas</a>  
+        <a class="list-group-item btn2 cor1" href="panel2.html">Exibir Painel Envelopes</a>            
+        <a class="list-group-item btn2 cor2" href="envelopes.html">Controle - Entrega de Envelopes</a> 
+
       </div>
 
     </div>           
