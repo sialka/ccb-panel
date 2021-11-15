@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>Controle de Reserva</title>
+  <title>Controle de Reserva</title>  
   
-  <link rel="stylesheet" href="assets/css/control.css">
   <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="assets/css/control.css">
 </head>
 <body>
 
@@ -17,31 +18,63 @@
 
   <div class="container">
 
-    <header class="item-title">
-      <h1 class="red">Controle de Reservas</h1>      
-      <label>Senha Nº</label>
-    </header>
+    <!-- Card -->
+    <div class="card bg-warning text-center bungee" style="margin-top: 2em">
 
-    <main>
-      <div class="item-button">
-        <a onclick="anterior()" class="btn btn-danger"> - </a>
+      <!-- Titulo -->
+      <div class="card-header d-flex justify-content-center align-items-center">
+        <div class="bungee medium">
+          <h1 class="text-white">Reserva</h1>      
+        </div>
       </div>
-
-      <div class="item-number">
-        <label id="painel-reserva">0</label>              
-      </div>
-
-      <div class="item-button">
-        <a onclick="proximo()" class="btn btn-success"> + </a>
-      </div>
-    </main>
-
-    <footer class="item-submit">
-      <form id="btnSubmit">                     
-        <button class="btn btn-large btn-primary" type="submit">Chamar</button> 
-      </form>
-    </footer>    
     
+      <!-- Card Corpo -->
+      <div class="card-body bg-white">    
+
+        <!-- Senha -->
+        <div class="d-flex justify-content-center">            
+          <label class="medium text-muted">Senha Nº</label>
+        </div>        
+
+        <div class="d-flex justify-content-center">                        
+          <div id="painel-reserva" class="large">0</div>
+        </div>
+
+        <!-- Botões Esquerda/Direita -->
+        <div class="d-flex justify-content-between">
+
+          <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
+              <a onclick="anterior()" class="btn btn-link text-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+              </a>          
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
+            <a onclick="proximo()" class="btn btn-link text-success">
+              <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+              </svg>              
+            </a>          
+          </div>
+
+        </div>        
+
+        <!-- Botões Chamar/Voltar -->
+        <div style="margin-top: 1em;">
+          <form id="btnSubmit">            
+            <button class="btn btn-lg btn-block btn-primary medium" type="submit">Chamar</button>             
+          </form>          
+        </div>
+  
+        <div style="margin-top: 1em;">            
+            <a href="index.html" class="btn btn-lg btn-block btn-danger medium" type="submit">Voltar</a>            
+        </div>
+    
+      </div>
+
+    </div>
   </div>
 
   <script src="assets/js/data.js"></script>

@@ -5,33 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>Controle de Ficha</title>
+  <title>Controle de Ficha</title>  
   
-  <!--link rel="stylesheet" href="assets/css/control.css"-->
   <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
-  <style>
-    .bungee{
-      font-family: 'Bungee', cursive;
-      font-weight: 700; 
-      overflow: hidden; 
-    }
-    .medium{
-      font-size: 4em;
-    }
-    .large{
-      font-size: 10em;
-    }
-    a{
-      color: white;
-    }
-    a:link{
-      text-decoration: none;      
-    }
-    a:hover{
-      color:red;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/control.css">
 </head>
 <body>
 
@@ -40,77 +18,75 @@
 
   <div class="container">
       
-      <div class="card bg-warning text-center bungee" style="margin-top: 2em">
+    <!-- Card -->  
+    <div class="card bg-warning text-center bungee" style="margin-top: 2em">
 
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <div class="">
-            <h1 class="bungee medium text-white">Controle de Fichas</h1>      
-          </div>
-          <div class="bungee medium text-white">
-            <a href="index.html">
-              &times;
-            </a>            
-          </div>
-          
+      <!-- Titulo -->
+      <div class="card-header d-flex justify-content-center align-items-center">
+        <div class="bungee medium">
+          <h1 class="text-white">Conferência</h1>      
         </div>
+      </div>
         
-        <div class="card-body bg-white">
+      <!-- Card Corpo -->
+      <div class="card-body bg-white">
 
-          <div class="d-flex justify-content-center">            
-            <label class="medium text-muted">Senha Nº</label>
-          </div>
+        <!-- Senha -->
+        <div class="d-flex justify-content-center">            
+          <label class="medium text-muted">Senha Nº</label>
+        </div>
 
-          <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-center">                        
+          <div id="painel-ficha" class="large">0</div>
+        </div>
 
-            <div class="d-flex align-items-center" style="width: 25%;">
-                <a onclick="anterior()" class="btn btn-block btn-lg btn-danger">
-                  <svg id="i-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                    <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
-                  </svg>
-                </a>          
-            </div>
-            
-            <div class="" style="width: 50%;">              
-              <div id="painel-ficha" class="large">0</div>
-            </div>
-    
-            <div class="d-flex align-items-center" style="width: 25%">
-              <a onclick="proximo()" class="btn btn-block btn-success">
-                <svg id="i-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                  <path d="M22 6 L30 16 22 26 M30 16 L2 16" />
-                </svg>                
+        <!-- Botões Esquerda/Direita -->
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
+              <a onclick="anterior()" class="btn btn-link -btn-block -btn-lg -btn-danger text-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
               </a>          
-            </div>
-
           </div>
+          <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
+            <a onclick="proximo()" class="btn btn-link -btn-block -btn-success text-success">
+              <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+              </svg>              
+            </a>          
+          </div>
+        </div>
 
-        <div>
-        
+        <!-- Botões Chamar/Voltar -->
         <div style="margin-top: 1em;">
           <form id="btnSubmit">            
             <button class="btn btn-lg btn-block btn-primary medium" type="submit">Chamar</button>             
           </form>          
         </div>
-        
+  
+        <div style="margin-top: 1em;">            
+            <a href="index.html" class="btn btn-lg btn-block btn-danger medium" type="submit">Voltar</a>            
+        </div>
+
       </div>
+
+    </div>
     
   </div>
   
   <script src="assets/js/data.js"></script>  
 	<script>
-		// Mudan?a temporaria 
+		// Mudança temporaria 
 		const ultima_senha = senha.numero;		
 		const painel_senha = document.querySelector('#painel-ficha');
 		painel_senha.innerText = ultima_senha;
-		console.log(ultima_senha)
+		
 	</script>	
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/socket.io.js"></script>
   <script src="assets/js/buttons.js"></script>
 	<script src="assets/js/panel1.js"></script>
-  
-	
-	
 
 </body>
 </html>
