@@ -39,14 +39,14 @@ function beep(){
 }*/
 
 
-
 /** Renderizar */
 function renderPlace(message) {  
 
   if (message.painel == 3){ 
     //beep();
     painel.innerHTML = message.place;            
-    painel.classList.add('bounce-in-fwd');      
+    painel.classList.add('bounce-in-fwd'); 
+          
   }
 
 }
@@ -59,7 +59,7 @@ socket.on('previousMessages', function(messages){
 });
 
 socket.on('receivedMessage', function(message){
-  renderPlace(message);
+  renderPlace(message);  
 });
 
 
