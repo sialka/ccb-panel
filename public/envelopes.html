@@ -6,39 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">  
   <title>Envelopes</title>  
   <link rel="stylesheet" href="assets/css/control2.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
   <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet">     
 </head>
 <body>  
 
   <div class="container">
+    <div class="card bg-dark text-center bungee" style="margin-top: 2em">
 
-    <header>
-      <h1><a href="/">Controle Envelopes</a></h1>            
-    </header>
-
-    <main> 
-        <div class="flex-atendimento">
-          <p>Em atendimento</p>
-          <a onclick="resete()">Reset</a>    
-        </div>      
-        <h2 id="atendimento">---</h2>
-        
-        <div class="flex-proximo">
-          <p>Próximo</p>
-          <select id="places" size="4">
-          </select>      
+      <!-- Titulo -->
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="bungee medium">
+          <h1 class="text-white">Envelopes</h1>      
         </div>
-    </main>     
+        <div class="bungee medium">
+          <a href="index.html" style="color: red!important;">
+            <span aria-hidden="true" >&times;</span>
+          </a>
+        </div>
+      </div>
 
-    <footer>
-      <div class="item flex">
-        <a class="btn call" onclick="chamar()">Chamar</button> 
-      </div>      
-      <div class="item flex">
-        <a class="btn repet" onclick="repete()">Repete</button> 
-      </div>      
-    </footer>        
+      <!-- Card Corpo -->
+      <div class="card-body bgcolor">
 
+        <span>Em atendimento</span>
+        <div class="card bord">            
+            <!-- a onclick="resete()">Reset</a -->    
+            <h2 id="atendimento" class="">---</h2>
+        </div>     
+
+        <div class="row">
+          <div class="col-6 m-top">
+            <span>Localidades</span>
+            <select id="places" size="4" class="form-control bord"></select>      
+          </div>
+          <div class="col-6 m-top">
+            <span>Atendidas</span>
+            <select id="placesAtendidas" size="4" class="form-control bord"></select>      
+          </div>
+        </div>
+
+        <div>
+          <select id="vozes" size="3" class="form-control bord mtop"></select>      
+        </div>
+
+        <div class="row m-top">
+          <div class="col-6">
+            <button id="btChamar" class="btn btn-lg btn-block btn-success bt-dedo large">Chamar</button> 
+          </div>      
+          <div class="col-6">
+            <button id="btAtendidas" class="btn btn-lg btn-block btn-warning bt-dedo large">Chamar</button> 
+          </div>      
+        </div>   
+        <div class="row m-top">
+          <div class="col-12">
+            <button id="btRepete" class="btn btn-lg btn-block btn-danger bt-dedo large">Repete</button> 
+          </div>      
+        </div>
+      
+      </div>
+
+    </div>     
   </div>
   
   <script src="assets/js/data.js"></script>  

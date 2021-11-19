@@ -1,90 +1,150 @@
-const places = document.querySelector('#places');
-const emAtendimento = document.querySelector('#atendimento');
+const emAtendimento = document.querySelector('#atendimento')
+const places = document.querySelector('#places')
+const localidadesAtendidas = document.querySelector('#placesAtendidas')
+const btChamarLocalidade = document.querySelector('#btChamar')
+const btChamarAtentida = document.querySelector('#btAtendidas')
+const btRepete = document.querySelector('#btRepete')
+const vozSelecionada = document.querySelector('#vozes')
 
-function resete(){  
+// Localidades
+const local = [
+  ['21-0225','BAIRRO DOS PIMENTAS'],
+  ['21-0227','ARACILIA'],
+  ['21-0778','TUPINAMBÁ'],
+  ['21-0232','ALICE'],
+  ['21-0424','ANGÉLICA'],
+  ['21-0476','ARAPONGAS'],
+  ['21-0374','BRASIL'],
+  ['21-0252','CUMBICA'],
+  ['21-1241','OLIVAS'],
+  ['21-1023','GUILHERMINO'],
+  ['21-0687','JACY'],
+  ['21-1054','MONTE ALEGRE'],
+  ['21-0401','NORMANDIA'],
+  ['21-0972','NOVA CANAÃ'],
+  ['21-0237','NOVA CUMBICA'],
+  ['21-0855','OLIVEIRA'],
+  ['21-0376','OTTAWA'],
+  ['21-0244','SANTO AFONSO'],
+  ['21-0226','DAS NAÇÕES'],
+  ['21-0959','INDUSTRIAL'],
+  ['21-0651','JANDAIA'],
+  ['21-0777','SÃO MIGUEL'],
+  ['21-0854','UIRAPURU'],
+  ['21-0779','SÍTIO SÃO FRANCISCO'],
+  ['21-0945','ALZIRA'],
+  ['21-0233','ANNY'],
+  ['21-0599','DINAMARCA'],
+  ['21-0474','PARAÍSO'],
+  ['00-0000','ENCERRADO'],
+  ['00-0001','SEM SISTEMA'],    
+];
 
-  const local = [
-    ['21-0225','BAIRRO DOS PIMENTAS'],
-    ['21-0227','CIDADE ARACILIA'],
-    ['21-0778','CIDADE TUPINAMBÁ'],
-    ['21-0232','JARDIM ALICE'],
-    ['21-0424','JARDIM ANGÉLICA'],
-    ['21-0476','JARDIM ARAPONGAS'],
-    ['21-0374','JARDIM BRASIL'],
-    ['21-0252','JARDIM CUMBICA'],
-    ['21-1241','JARDIM DAS OLIVAS'],
-    ['21-1023','JARDIM GUILHERMINO'],
-    ['21-0687','JARDIM JACY'],
-    ['21-1054','JARDIM MONTE ALEGRE'],
-    ['21-0401','JARDIM NORMANDIA'],
-    ['21-0972','JARDIM NOVA CANAÃ'],
-    ['21-0237','JARDIM NOVA CUMBICA'],
-    ['21-0855','JARDIM OLIVEIRA'],
-    ['21-0376','JARDIM OTTAWA'],
-    ['21-0244','JARDIM SANTO AFONSO'],
-    ['21-0226','PARQUE DAS NAÇÕES'],
-    ['21-0959','PARQUE INDUSTRIAL'],
-    ['21-0651','PARQUE JANDAIA'],
-    ['21-0777','PARQUE SÃO MIGUEL'],
-    ['21-0854','PARQUE UIRAPURU'],
-    ['21-0779','SÍTIO SÃO FRANCISCO'],
-    ['21-0945','VILA ALZIRA'],
-    ['21-0233','VILA ANNY'],
-    ['21-0599','VILA DINAMARCA'],
-    ['21-0474','VILA PARAÍSO'],
-    ['00-0000','ENCERRADO'],
-    ['00-0001','SEM SISTEMA'],  
-    ['00-0002','---']
-  ];
+const fala = []
 
-  while (places.length) places.remove(0);
+fala['21-0225'] = 'BAIRRO DOS PIMENTAS'
+fala['21-0227'] = 'CIDADE ARACÍLIA'
+fala['21-0778'] = 'CIDADE TUPINAMBÁ'
+fala['21-0232'] = 'JARDIM ALICE'
+fala['21-0424'] = 'JARDIM ANGÉLICA'
+fala['21-0476'] = 'JARDIM ARAPONGAS'
+fala['21-0374'] = 'JARDIM BRASIL'
+fala['21-0252'] = 'JARDIM CUMBICA'
+fala['21-1241'] = 'JARDIM DAS OLIVAS'
+fala['21-1023'] = 'JARDIM GUILHERMINO'
+fala['21-0687'] = 'JARDIM JACY'
+fala['21-1054'] = 'JARDIM MONTE ALEGRE'
+fala['21-0401'] = 'JARDIM NORMANDIA'
+fala['21-0972'] = 'JARDIM NOVA CANAÃ'
+fala['21-0237'] = 'JARDIM NOVA CUMBICA'
+fala['21-0855'] = 'JARDIM OLIVEIRA'
+fala['21-0376'] = 'JARDIM OTTAWA'
+fala['21-0244'] = 'JARDIM SANTO AFONSO'
+fala['21-0226'] = 'PARQUE DAS NAÇÕES'
+fala['21-0959'] = 'PARQUE INDUSTRIAL'
+fala['21-0651'] = 'PARQUE JANDAIA'
+fala['21-0777'] = 'PARQUE SÃO MIGUEL'
+fala['21-0854'] = 'PARQUE UIRAPURU'
+fala['21-0779'] = 'SÍTIO SÃO FRANCISCO'
+fala['21-0945'] = 'VILA ALZIRA'
+fala['21-0233'] = 'VILA ANI'
+fala['21-0599'] = 'VILA DINAMARCA'
+fala['21-0474'] = 'VILA PARAÍSO'
+fala['00-0000'] = 'ENCERRADO'
+fala['00-0001'] = 'SEM SISTEMA'    
 
-  local.forEach(itens =>{
-    let option = document.createElement('option');
-    option.value = itens[0];
-    option.text = itens[1];  
-    places.appendChild(option);    
-  });
 
-  places.selectedIndex = 0;  
-}
-
-function chamar(){
+// Eventos no Button Chamar - Localidades
+btChamarLocalidade.addEventListener('click', () => {
 
   if (places.length) {    
-        
-    let atual = places.selectedIndex; 
-    emAtendimento.innerHTML = places.options[places.selectedIndex].text;
+
+    let localidade = places.selectedIndex  
+    let cod = places.options[localidade].value    
+
+    // Exibe em Atendimento
+    emAtendimento.innerHTML = fala[cod]
     
-    // Filtro de itens que deve ficar na lista
-    switch (places.options[places.selectedIndex].value) {
-      case '00-0000': break;
-      case '00-0001': break;
-      case '00-0002': break;
-      default:
-        places.remove(atual);
-    }
+    // Adiciona em Atendidas
+    localidadesAtendidas.appendChild(places.options[localidade])
 
-    places.selectedIndex = 0;  
+    // Remove da lista
+    places.remove(localidade);
 
-    const client = emAtendimento.innerText;     
+    places.selectedIndex = 0; 
 
-    if (client.length) {
-      
-      var messageObject = {              
-        painel: 3,
-        place: client
-      };
+    // Enviando para o Painel
+    enviarPainel(emAtendimento.innerText)
+    falar(emAtendimento.innerText)
 
-      renderPlace(messageObject);
-      socket.emit('sendMessage', messageObject);
-    }   
-
+  }else{
+    alert('Não há mais localidades...')
   }
 
+});
+
+btChamarAtentida.addEventListener('click', ()=> {
+
+  if (localidadesAtendidas.length) {
+    let localidade = localidadesAtendidas.selectedIndex
+    let cod = localidadesAtendidas.options[localidade].value
+  
+    // Exibe em Atendimento    
+    emAtendimento.innerHTML = fala[cod]
+
+    //Enviar para o Painel
+    enviarPainel(emAtendimento.innerText)
+    falar(emAtendimento.innerText)
+
+    // Posicionando para o 1ª registro
+    //localidadesAtendidas.selectedIndex = 0
+
+  }else{
+    alert('Não há localidades atendidas...')
+  }
+
+});
+
+btRepete.addEventListener('click', () => {
+
+  //Enviar para o Painel
+  enviarPainel(emAtendimento.innerText)
+  falar('Última chamada, ' + emAtendimento.innerText)
+
+});
+
+const enviarPainel = text => {
+
+  var messageObject = {              
+    painel: 3,
+    place: text
+  };
+
+  renderPlace(messageObject);
+  socket.emit('sendMessage', messageObject);    
 }
 
-function repete(){
+const repete = () => {
       
   var messageObject = {              
     painel: 3,
@@ -95,4 +155,75 @@ function repete(){
   socket.emit('sendMessage', messageObject);    
 }
 
-resete();
+const load = () => {  
+
+  while (places.length) places.remove(0);
+
+  local.forEach(itens =>{   
+
+    let option = document.createElement('option');
+    
+    option.value = itens[0];
+    option.text = itens[1];  
+
+    places.appendChild(option);    
+  });
+
+  places.selectedIndex = 0;  
+}
+
+// API SpeechSynthesis
+const utterance = new SpeechSynthesisUtterance()
+
+const setTextMessage = text => {
+  utterance.text = text
+}
+
+const speakText = () => {
+  speechSynthesis.speak(utterance)
+}
+
+const setVoice = event => {
+  //console.log(event.target.value)
+  const selectedVoice = voices.find(voice => voice.name === event.target.value)
+  utterance.voice = selectedVoice
+  //speechSynthesis.speak(utterance)
+}
+
+let voices = []
+
+speechSynthesis.addEventListener('voiceschanged', () => {
+  
+  voices = speechSynthesis.getVoices()
+  
+  voices.forEach(({ name, lang }) => {
+    
+    if(lang == 'pt-BR'){
+      const option = document.createElement('option')
+
+      option.value = name
+      option.textContent = `${lang} | ${name} `
+      
+      vozSelecionada.appendChild(option)
+
+      
+    }
+  })
+
+  // Visual
+  vozSelecionada.selectedIndex = 2  
+  // Seleciona a voz do google pt-br manualmente
+  utterance.voice = voices[16]  
+
+})
+
+vozSelecionada.addEventListener('change', setVoice)
+
+const falar = texto => {
+  setTextMessage(texto)
+  speakText()
+}
+
+// iniciando App
+
+load();

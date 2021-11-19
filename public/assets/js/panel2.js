@@ -14,6 +14,7 @@ if (panelTitle){
 }
 
 /** Beep */
+/*
 function beep(){
 
   const controll = document.querySelector(".squares");
@@ -26,15 +27,16 @@ function beep(){
 
     const o = context.createOscillator();
 
-    o.type = "triangle";
+    o.type = "sine";
+    o.frequency.value = 830.6
     o.connect(context.destination);
     o.start();
     setTimeout(function(){ 
             o.stop();
-    }, 500);
+    }, 100);
 
   }
-}
+}*/
 
 
 
@@ -42,7 +44,7 @@ function beep(){
 function renderPlace(message) {  
 
   if (message.painel == 3){ 
-    beep();
+    //beep();
     painel.innerHTML = message.place;            
     painel.classList.add('bounce-in-fwd');      
   }
