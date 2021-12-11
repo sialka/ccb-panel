@@ -24,6 +24,7 @@ if (bt.style.display=="none"){
 
 
 /** Beep */
+/*
 function beep(){
 
   const controll = document.querySelector(".squares");
@@ -44,7 +45,7 @@ function beep(){
     }, 500);
 
   }
-}
+}*/
 
 
 /** Renderizar */
@@ -55,7 +56,7 @@ function renderSenha(message) {
 
     const painelFicha = document.querySelector('#painel-ficha');
     
-    beep();
+    //beep();
 
     painelFicha.innerHTML = message.message;            
     painelFicha.classList.add('wobble-hor-bottom');     
@@ -67,7 +68,7 @@ function renderSenha(message) {
 
     const painelReserva = document.querySelector('#painel-reserva');
     
-    beep();
+    //beep();
     
     painelReserva.innerHTML = message.message; 
     painelReserva.classList.add('wobble-hor-bottom');     
@@ -105,6 +106,8 @@ $('#btnSubmit').submit(function(event) {
       };
 
       renderSenha(messageObject1);
+
+      falar('Senha, ' + message + 'Conferência de Ficha.')
 
       socket.emit('sendMessage', messageObject1);
     }   

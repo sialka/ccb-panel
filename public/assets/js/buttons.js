@@ -1,3 +1,7 @@
+const vozSelecionada = document.querySelector('#vozes')
+const btnVoltar = document.querySelector('#volta')
+const btnAvanca = document.querySelector('#avanca')
+
 /**
  * Controle dos Botões
  */
@@ -10,8 +14,8 @@ const reserva = document.querySelector('#form-reserva');
 /**
  * Botão Próximo
  */
-function proximo(){
 
+ btnAvanca.addEventListener('click', () => {
   //const ficha = document.querySelector('#form-ficha');
   //const reserva = document.querySelector('#form-reserva');
 
@@ -35,9 +39,9 @@ function proximo(){
     senha.innerText = prox;    
   }
 
-}
+})
 
-function anterior(){
+btnVoltar.addEventListener('click', () => {
 
   // Identifica o Controle de Fichas
   if (ficha) {      
@@ -59,6 +63,4 @@ function anterior(){
     senha.innerText = prox;       
   }
 
-}
-
-
+})
