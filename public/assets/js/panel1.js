@@ -127,6 +127,8 @@ $('#btnSubmit').submit(function(event) {
 
       renderSenha(messageObject2);
 
+      falar('Senha, ' + message + 'Reserva de Roupas.')
+
       socket.emit('sendMessage', messageObject2);
     }
 
