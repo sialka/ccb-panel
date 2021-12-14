@@ -53,15 +53,17 @@
     const pFicha   = document.querySelector('#painel-ficha');
     const pReserva = document.querySelector('#painel-reserva');
     
-    pFicha.addEventListener('animationstart', event => {      
-      console.log('Senha, ' + pFicha.innerHTML + ' conferência de ficha.')
-      falar('Senha, ' + pFicha.innerHTML + ' conferência de ficha.')
-    });
+    if(localStorage.getItem('sound')=='voz'){
+      pFicha.addEventListener('animationstart', event => {      
+        console.log('Senha, ' + pFicha.innerHTML + ' conferência de ficha.')
+        falar('Senha, ' + pFicha.innerHTML + ' conferência de ficha.')
+      });
 
-    pReserva.addEventListener('animationstart', event => {      
-      console.log('Senha, ' + pReserva.innerHTML + ' reserva de roupas.')
-      falar('Senha, ' + pReserva.innerHTML + ' reserva de roupas.')
-    });
+      pReserva.addEventListener('animationstart', event => {      
+        console.log('Senha, ' + pReserva.innerHTML + ' reserva de roupas.')
+        falar('Senha, ' + pReserva.innerHTML + ' reserva de roupas.')
+      });
+    }
 
   </script>
 </body>

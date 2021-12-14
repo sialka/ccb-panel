@@ -24,28 +24,31 @@ if (bt.style.display=="none"){
 
 
 /** Beep */
-/*
-function beep(){
 
-  const controll = document.querySelector(".squares");
+const beep = () => {
 
-  // Se tiver no Painel emite som.
-  if (controll) { 
+  if(localStorage.getItem('sound') == 'beep'){
 
-    //https://marcgg.com/blog/2016/11/01/javascript-audio/
-    const context = new AudioContext();
+    const controll = document.querySelector(".squares");
 
-    const o = context.createOscillator();
+    // Se tiver no Painel emite som.
+    if (controll) { 
 
-    o.type = "triangle";
-    o.connect(context.destination);
-    o.start();
-    setTimeout(function(){ 
-            o.stop();
-    }, 500);
+      //https://marcgg.com/blog/2016/11/01/javascript-audio/
+      const context = new AudioContext();
+      const o = context.createOscillator();
 
+      o.type = "triangle";
+      o.connect(context.destination);
+      o.start();
+      setTimeout(function(){ 
+              o.stop();
+      }, 500);
+
+    }
   }
-}*/
+  
+}
 
 
 /** Renderizar */
@@ -56,7 +59,7 @@ function renderSenha(message) {
 
     const painelFicha = document.querySelector('#painel-ficha');
     
-    //beep();
+    beep();
 
     painelFicha.innerHTML = message.message;            
     painelFicha.classList.add('wobble-hor-bottom');     
@@ -68,7 +71,7 @@ function renderSenha(message) {
 
     const painelReserva = document.querySelector('#painel-reserva');
     
-    //beep();
+    beep();
     
     painelReserva.innerHTML = message.message; 
     painelReserva.classList.add('wobble-hor-bottom');     
