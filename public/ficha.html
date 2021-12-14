@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="assets/css/control.css">
 </head>
 <body>
-
-  <select id="vozes" size="3" _style="display: none"></select>        
+  
   <p style="display: none" id="form-ficha"></p>
   <p style="display: none" id="painel-reserva"></p>
 
@@ -73,23 +72,20 @@
 
       </div>
 
-    </div>
-    
+    </div>    
   </div>
   
-  <script src="assets/js/data.js"></script>  
-	<script>
-		// Mudança temporaria 
+  <script src="assets/js/data.js"></script>  	
+  <script>
+		// Mudanca temporaria 
 		const ultima_senha = senha.numero;		
 		const painel_senha = document.querySelector('#painel-ficha');
-		painel_senha.innerText = ultima_senha;
-		
+		painel_senha.innerText = ultima_senha;		
 	</script>	
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/socket.io.js"></script>  
   <script src="assets/js/buttons.js"></script>
-	<script src="assets/js/panel1.js"></script>
-  <script src="assets/js/voice.js"></script> 
+	<script src="assets/js/panel1.js"></script>  
 
 </body>
 </html>

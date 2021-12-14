@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="assets/css/control.css">
 </head>
 <body>
-
-  <select id="vozes" size="3" _style="display: none"></select>
+  
   <p style="display: none" id="form-reserva"></p>  
   <p style="display: none" id="painel-ficha"></p>  
 
@@ -48,7 +47,6 @@
 
         <!-- Botões Esquerda/Direita -->
         <div class="d-flex justify-content-between">
-
           <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
               <button id="volta" class="btn btn-link text-danger">
                 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
@@ -56,7 +54,6 @@
                 </svg>
               </button>          
           </div>
-
           <div class="d-flex align-items-center justify-content-center" style="width: 50%;">
             <button id="avanca" class="btn btn-link text-success">
               <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
@@ -64,7 +61,6 @@
               </svg>              
             </button>          
           </div>
-
         </div>        
 
         <!-- Botões Chamar/Voltar -->
@@ -81,17 +77,15 @@
 
   <script src="assets/js/data.js"></script>
 	<script>
-		// Mudan?a temporaria 
+		// Mudanca temporaria 
 		const ultima_senha = senha.numero;		
 		const painel_senha = document.querySelector('#painel-reserva');
-		painel_senha.innerText = ultima_senha;
-		console.log(ultima_senha)
+		painel_senha.innerText = ultima_senha;		
 	</script>		
   <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/socket.io.js"></script>
+  <script src="assets/js/socket.io.js"></script>  
+  <script src="assets/js/buttons.js"></script>  
   <script src="assets/js/panel1.js"></script>
-  <script src="assets/js/buttons.js"></script>
-  <script src="assets/js/voice.js"></script> 
   
 </body>
 </html>

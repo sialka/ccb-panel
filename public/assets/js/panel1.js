@@ -107,7 +107,7 @@ $('#btnSubmit').submit(function(event) {
 
       renderSenha(messageObject1);
 
-      falar('Senha, ' + message + 'Conferência de Ficha.')
+      //falar('Senha, ' + message + 'Conferência de Ficha.')
 
       socket.emit('sendMessage', messageObject1);
     }   
@@ -127,7 +127,7 @@ $('#btnSubmit').submit(function(event) {
 
       renderSenha(messageObject2);
 
-      falar('Senha, ' + message + 'Reserva de Roupas.')
+      //falar('Senha, ' + message + 'Reserva de Roupas.')
 
       socket.emit('sendMessage', messageObject2);
     }

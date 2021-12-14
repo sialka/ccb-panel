@@ -1,4 +1,4 @@
-const vozSelecionada = document.querySelector('#vozes')
+/* const vozSelecionada = document.querySelector('#vozes') */
 const btnVoltar = document.querySelector('#volta')
 const btnAvanca = document.querySelector('#avanca')
 

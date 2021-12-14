@@ -1,18 +1,11 @@
 // API SpeechSynthesis
+const vozSelecionada = document.querySelector('#vozes')
 
 const utterance = new SpeechSynthesisUtterance()
 
-const setTextMessage = text => {
-  utterance.text = text
-}
-
-const speakText = () => {
-  speechSynthesis.speak(utterance)
-}
-
-const falar = texto => {
-    setTextMessage(texto)
-    speakText()
+const falar = texto => {    
+  utterance.text = texto
+  speechSynthesis.speak(utterance)  
 }
 
 // Escolhendo Vozes
